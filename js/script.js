@@ -74,4 +74,22 @@
     startAuto();
   }
 
+  var reviewRotator = document.querySelector("[data-review-rotator]");
+  if (reviewRotator) {
+    var reviewSlides = reviewRotator.querySelectorAll(".hero-review-slide");
+    var reviewIndex = 0;
+
+    function showReview(index) {
+      reviewSlides[reviewIndex].classList.remove("is-active");
+      reviewIndex = (index + reviewSlides.length) % reviewSlides.length;
+      reviewSlides[reviewIndex].classList.add("is-active");
+    }
+
+    if (reviewSlides.length > 1) {
+      setInterval(function () {
+        showReview(reviewIndex + 1);
+      }, 4200);
+    }
+  }
+
 })();

@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.55;
@@ -274,34 +274,51 @@ p + p {
 
 .hero-sportida {
   position: relative;
-  padding: 140px 0 86px;
+  padding: 120px 0 72px;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-areas:
+    "left product right"
+    ". review ."
+    ". cta .";
   gap: 30px;
   align-items: center;
-  min-height: 520px;
+  min-height: 560px;
 }
 
 .hero-copy {
+  grid-area: left;
   max-width: 420px;
   color: #ffffff;
+  align-self: center;
+  justify-self: start;
+  text-align: left;
+  padding-top: 0;
+  transform: translateY(-84px);
 }
 
 .hero-copy .eyebrow {
   color: var(--support-yellow);
+  margin-bottom: 12px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2rem, 3.1vw, 3rem);
-  margin-bottom: 14px;
+  font-size: clamp(2.15rem, 3.1vw, 3.35rem);
+  margin-bottom: 12px;
 }
 
 .hero-copy > p {
   color: #ecf1ff;
-  max-width: 56ch;
+  max-width: 24ch;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .hero-cta {
@@ -328,13 +345,14 @@ p + p {
 }
 
 .hero-product {
+  grid-area: product;
   position: relative;
   isolation: isolate;
   justify-self: center;
+  align-self: center;
   width: 100%;
-  max-width: 460px;
-  transform: translateY(-6px);
-  perspective: 1200px;
+  max-width: 500px;
+  transform: translateY(42px);
 }
 
 .hero-product::before,
@@ -369,148 +387,33 @@ p + p {
   animation: glowPulse 6s ease-in-out infinite;
 }
 
-.hero-exploded-view {
+.hero-product-visual {
   position: relative;
   z-index: 2;
-  width: min(100%, 430px);
-  height: 560px;
+  width: min(100%, 470px);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-.hero-knee-guide {
-  position: absolute;
-  inset: 24px 88px 40px;
-  border-radius: 42% 42% 36% 36% / 18% 18% 26% 26%;
-  background:
-    radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(132, 146, 190, 0.14) 28%, rgba(42, 50, 78, 0.1) 58%, rgba(8, 10, 18, 0) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    0 30px 70px rgba(4, 8, 20, 0.28);
-  filter: blur(0.5px);
-}
-
-.hero-pad-segment {
-  --segment-x: 0px;
-  --segment-rotate: 0deg;
-  --segment-scale: 1;
-  --float-distance: -10px;
+.hero-product-image {
+  position: relative;
   z-index: 2;
-  position: absolute;
-  left: 50%;
-  border-radius: 999px;
-  background:
-    linear-gradient(180deg, rgba(43, 52, 84, 0.96) 0%, rgba(18, 22, 35, 0.98) 52%, rgba(8, 10, 18, 1) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    inset 0 -10px 18px rgba(0, 0, 0, 0.34),
-    0 18px 24px rgba(5, 8, 18, 0.36),
-    0 34px 44px rgba(0, 0, 0, 0.2);
-  transform: translateX(var(--segment-x)) rotate(var(--segment-rotate)) scale(var(--segment-scale));
-  animation: floatSegment 5.8s ease-in-out infinite;
-}
-
-.hero-pad-segment::before,
-.hero-pad-segment::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.hero-pad-segment::before {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 46%),
-    radial-gradient(circle at 24% 22%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 38%);
-  opacity: 0.75;
-}
-
-.hero-pad-segment::after {
-  inset: auto 12% 10px;
-  height: 14px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.28);
-  filter: blur(10px);
-  opacity: 0.65;
-}
-
-.segment-top {
-  top: 36px;
-  width: 180px;
-  height: 62px;
-  --segment-x: -122px;
-  --segment-rotate: -9deg;
-  --segment-scale: 0.98;
-  --float-distance: -12px;
-  animation-delay: -0.8s;
-}
-
-.segment-upper {
-  top: 112px;
-  width: 224px;
-  height: 78px;
-  --segment-x: -92px;
-  --segment-rotate: -5deg;
-  --float-distance: -8px;
-  animation-delay: -1.6s;
-}
-
-.segment-core {
-  top: 204px;
-  width: 246px;
-  height: 122px;
-  --segment-x: -18px;
-  --segment-rotate: 0deg;
-  animation-delay: -0.2s;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -14px 20px rgba(0, 0, 0, 0.34),
-    0 20px 26px rgba(5, 8, 18, 0.4),
-    0 42px 56px rgba(0, 0, 0, 0.24);
-}
-
-.segment-lateral-left {
-  top: 250px;
-  width: 118px;
-  height: 88px;
-  --segment-x: -156px;
-  --segment-rotate: -14deg;
-  --segment-scale: 0.96;
-  --float-distance: -7px;
-  animation-delay: -1.2s;
-}
-
-.segment-lateral-right {
-  top: 258px;
-  width: 126px;
-  height: 94px;
-  --segment-x: 42px;
-  --segment-rotate: 13deg;
-  --segment-scale: 0.96;
-  --float-distance: -9px;
-  animation-delay: -2s;
-}
-
-.segment-lower {
-  top: 356px;
-  width: 212px;
-  height: 108px;
-  --segment-x: -26px;
-  --segment-rotate: 7deg;
-  --segment-scale: 0.98;
-  --float-distance: -11px;
-  animation-delay: -0.5s;
+  display: block;
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.34));
+  animation: heroProductFloat 6s ease-in-out infinite;
 }
 
 .hero-product-shadow {
   position: relative;
   z-index: 1;
-  width: 290px;
-  height: 62px;
-  margin: -18px auto 0;
+  width: 270px;
+  height: 46px;
+  margin: -26px auto 0;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.48);
   filter: blur(28px);
@@ -521,33 +424,97 @@ p + p {
   position: relative;
   z-index: 2;
   max-width: 340px;
-  margin: 26px auto 0;
+  margin: 16px auto 0;
   padding: 14px 18px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.9rem;
   line-height: 1.45;
-  box-shadow: 0 16px 28px rgba(6, 10, 22, 0.22);
+  box-shadow: 0 12px 22px rgba(6, 10, 22, 0.16);
 }
 
 .hero-right {
+  grid-area: right;
   color: #f1f4ff;
   max-width: 350px;
+  align-self: center;
   justify-self: end;
-  text-align: left;
+  text-align: right;
+  padding-top: 0;
+  transform: translateY(-90px);
 }
 
 .hero-right h2 {
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  line-height: 1.2;
-  margin-bottom: 10px;
+  font-size: clamp(2rem, 3vw, 3.35rem);
+  line-height: 1.06;
+  margin-bottom: 0;
 }
 
-.hero-right p {
-  color: #dbe0ff;
+.hero-review-card {
+  grid-area: review;
+  justify-self: center;
+  margin: 10px auto 0;
+  max-width: 320px;
+  padding: 12px 14px 13px;
+  border: 1px solid rgba(143, 255, 255, 0.08);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(39, 18, 105, 0.16) 0%, rgba(18, 28, 61, 0.14) 100%);
+  box-shadow:
+    0 6px 12px rgba(6, 10, 24, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(3px);
+}
+
+.hero-review-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.hero-review-stars {
+  color: var(--support-yellow);
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 10px rgba(241, 213, 60, 0.1);
+}
+
+.hero-review-slides {
+  position: relative;
+  min-height: 84px;
+}
+
+.hero-review-slide {
+  display: none;
+  color: #f4f6ff;
+}
+
+.hero-review-slide.is-active {
+  display: block;
+}
+
+.hero-review-slide p {
+  color: #f4f6ff;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.hero-review-slide small {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--support-cyan);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.hero-cta-mobile-wrap {
+  grid-area: cta;
+  display: none;
+  justify-self: center;
 }
 
 .feature-grid,
@@ -738,15 +705,15 @@ p + p {
   }
 }
 
-@keyframes floatSegment {
+@keyframes heroProductFloat {
   0% {
-    transform: translateX(var(--segment-x)) translateY(0) rotate(var(--segment-rotate)) scale(var(--segment-scale));
+    transform: translateY(0);
   }
   50% {
-    transform: translateX(var(--segment-x)) translateY(var(--float-distance)) rotate(var(--segment-rotate)) scale(var(--segment-scale));
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateX(var(--segment-x)) translateY(0) rotate(var(--segment-rotate)) scale(var(--segment-scale));
+    transform: translateY(0);
   }
 }
 
@@ -816,8 +783,14 @@ p + p {
 
   .hero-container {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "product"
+      "left"
+      "review"
+      "cta"
+      "right";
     min-height: 0;
-    gap: 22px;
+    gap: 18px;
     text-align: center;
   }
 
@@ -826,6 +799,13 @@ p + p {
     max-width: 620px;
     justify-self: center;
     text-align: center;
+    padding-top: 0;
+    transform: none;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 0.88rem;
+    letter-spacing: 0.01em;
   }
 
   .hero-product {
@@ -835,65 +815,37 @@ p + p {
     order: -1;
   }
 
-  .hero-exploded-view {
+  .hero-product-visual {
     width: min(100%, 360px);
-    height: 470px;
   }
 
-  .hero-knee-guide {
-    inset: 24px 68px 34px;
-  }
-
-  .segment-top {
-    top: 30px;
-    width: 154px;
-    height: 56px;
-    --segment-x: -102px;
-  }
-
-  .segment-upper {
-    top: 98px;
-    width: 194px;
-    height: 72px;
-    --segment-x: -74px;
-  }
-
-  .segment-core {
-    top: 178px;
-    width: 214px;
-    height: 104px;
-    --segment-x: -12px;
-  }
-
-  .segment-lateral-left {
-    top: 216px;
-    width: 102px;
-    height: 76px;
-    --segment-x: -136px;
-  }
-
-  .segment-lateral-right {
-    top: 222px;
-    width: 108px;
-    height: 82px;
-    --segment-x: 34px;
-  }
-
-  .segment-lower {
-    top: 308px;
-    width: 182px;
-    height: 96px;
-    --segment-x: -18px;
+  .hero-product-image {
+    max-width: 360px;
   }
 
   .hero-product-shadow {
-    width: 240px;
-    height: 54px;
+    width: 220px;
+    height: 40px;
+    margin-top: -20px;
   }
 
-  .hero-product-caption {
+  .hero-review-card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
     max-width: 300px;
-    margin-top: 18px;
+  }
+
+  .hero-cta-desktop {
+    display: none;
+  }
+
+  .hero-cta-mobile-wrap {
+    display: block;
+  }
+
+  .hero-cta-mobile {
+    margin-top: 0;
   }
 
   .hero-overlay {
