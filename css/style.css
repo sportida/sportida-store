@@ -243,8 +243,7 @@ p + p {
 
 .section-real-training {
   position: relative;
-  background:
-    linear-gradient(180deg, #eef4fb 0%, #e8f0fa 48%, #e3edf8 100%);
+  background-color: #e9eff4;
   color: #16233b;
 }
 
@@ -261,7 +260,7 @@ p + p {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(12, 18, 34, 0.04) 0%, rgba(12, 18, 34, 0.08) 56%, rgba(238, 244, 251, 0.9) 100%);
+    linear-gradient(180deg, rgba(12, 18, 34, 0.03) 0%, rgba(12, 18, 34, 0.06) 52%, rgba(233, 239, 244, 0.24) 72%, rgba(233, 239, 244, 0.92) 100%);
   pointer-events: none;
 }
 
@@ -301,6 +300,81 @@ p + p {
 
 .section-real-training-copy p + p {
   margin-top: 18px;
+}
+
+.section-impact-protection {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.section-impact-protection-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.section-impact-protection-media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.section-impact-protection-copy {
+  text-align: left;
+}
+
+.section-impact-protection-copy h2 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.08;
+  color: #101d34;
+  margin-bottom: 18px;
+}
+
+.section-impact-protection-copy p {
+  max-width: 38ch;
+  font-size: clamp(1rem, 2.2vw, 1.08rem);
+  line-height: 1.72;
+  color: rgba(16, 29, 52, 0.8);
+}
+
+.section-impact-protection-copy p + p {
+  margin-top: 16px;
+}
+
+.feature-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.feature-item-marker {
+  width: 14px;
+  height: 14px;
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, var(--support-yellow) 0%, var(--support-magenta) 100%);
+  box-shadow: 0 0 0 6px rgba(70, 80, 151, 0.08);
+}
+
+.feature-item-copy h3 {
+  font-size: 1.02rem;
+  line-height: 1.25;
+  color: #121f37;
+  margin-bottom: 6px;
+}
+
+.feature-item-copy p {
+  max-width: none;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(18, 31, 55, 0.74);
 }
 
 .hero-overlay {
@@ -1062,6 +1136,10 @@ p + p {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .section-impact-protection {
+    padding: 64px 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1239,6 +1317,54 @@ p + p {
     font-size: 1rem;
     line-height: 1.68;
   }
+
+  .section-impact-protection {
+    padding: 56px 0;
+  }
+
+  .section-impact-protection-layout {
+    gap: 24px;
+  }
+
+  .section-impact-protection-copy {
+    text-align: center;
+  }
+
+  .section-impact-protection-copy h2 {
+    font-size: clamp(1.85rem, 7.6vw, 2.6rem);
+    max-width: 11ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-impact-protection-copy p {
+    max-width: 31ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    gap: 18px;
+  }
+
+  .feature-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .feature-item-marker {
+    margin: 0 auto;
+  }
+
+  .feature-item-copy h3 {
+    font-size: 1rem;
+  }
+
+  .feature-item-copy p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (min-width: 921px) {
@@ -1252,8 +1378,8 @@ p + p {
 
   .section-real-training-media::after {
     background:
-      linear-gradient(180deg, rgba(12, 18, 34, 0.04) 0%, rgba(12, 18, 34, 0.08) 34%, rgba(232, 240, 250, 0.86) 100%),
-      linear-gradient(90deg, rgba(232, 240, 250, 0.74) 0%, rgba(232, 240, 250, 0.1) 42%, rgba(232, 240, 250, 0.46) 100%);
+      linear-gradient(180deg, rgba(12, 18, 34, 0.04) 0%, rgba(12, 18, 34, 0.08) 30%, rgba(233, 239, 244, 0.18) 62%, rgba(233, 239, 244, 0.94) 100%),
+      linear-gradient(90deg, rgba(233, 239, 244, 0.5) 0%, rgba(233, 239, 244, 0.08) 42%, rgba(233, 239, 244, 0.24) 100%);
   }
 
   .section-real-training-media img {
@@ -1272,5 +1398,19 @@ p + p {
 
   .section-real-training-copy p {
     max-width: 44ch;
+  }
+
+  .section-impact-protection {
+    padding: 84px 0;
+  }
+
+  .section-impact-protection-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 52px;
+    align-items: center;
+  }
+
+  .section-impact-protection-copy p {
+    max-width: 42ch;
   }
 }
