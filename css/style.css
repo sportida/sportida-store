@@ -357,6 +357,149 @@ p + p {
   margin-top: 16px;
 }
 
+.section-multisport-performance {
+  background: #ffffff;
+  padding: 96px 0;
+}
+
+.section-multisport-performance-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.section-multisport-performance-head {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-multisport-performance-head h2 {
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  line-height: 1.08;
+  color: #101d34;
+  margin-bottom: 16px;
+}
+
+.section-multisport-performance-head p {
+  max-width: 42ch;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.2vw, 1.12rem);
+  line-height: 1.72;
+  color: rgba(16, 29, 52, 0.78);
+}
+
+.section-multisport-performance-media {
+  width: 100%;
+}
+
+.section-multisport-performance-media img {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 22px 56px rgba(17, 29, 58, 0.12);
+}
+
+.section-multisport-performance-copy {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-multisport-performance-copy p {
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.76;
+  color: rgba(16, 29, 52, 0.8);
+}
+
+.section-multisport-performance-sports {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #101d34;
+  font-weight: 700;
+}
+
+.section-multisport-performance-sports li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.section-multisport-performance-sports li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--support-yellow) 0%, var(--support-magenta) 100%);
+  transform: translateY(-50%);
+}
+
+.section-mobility-fit {
+  background: #ffffff;
+  padding: 96px 0;
+}
+
+.section-mobility-fit-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.section-mobility-fit-media img {
+  width: min(100%, 620px);
+  border-radius: 16px;
+  box-shadow: 0 22px 56px rgba(17, 29, 58, 0.12);
+}
+
+.section-mobility-fit-copy h2 {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  line-height: 1.08;
+  color: #101d34;
+  margin-bottom: 18px;
+}
+
+.section-mobility-fit-copy p {
+  max-width: 40ch;
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.76;
+  color: rgba(16, 29, 52, 0.8);
+}
+
+.section-mobility-fit-features {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-mobility-fit-features li {
+  position: relative;
+  padding-left: 22px;
+  font-weight: 600;
+  color: #101d34;
+}
+
+.section-mobility-fit-features li::before {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--support-yellow) 0%, var(--support-magenta) 100%);
+  transform: translateY(-50%);
+}
+
 .feature-list {
   margin-top: 24px;
   display: grid;
@@ -693,6 +836,20 @@ p + p {
   background: rgba(11, 18, 34, 0.58);
   box-shadow: 0 18px 34px rgba(7, 11, 25, 0.18);
   backdrop-filter: blur(10px);
+  transition:
+    transform 0.55s ease,
+    opacity 0.55s ease;
+  will-change: transform, opacity;
+}
+
+.hero-review-card.is-sliding-out {
+  transform: translateX(-36px);
+  opacity: 0;
+}
+
+.hero-review-card.is-sliding-in {
+  transform: translateX(36px);
+  opacity: 0;
 }
 
 .hero-review-header {
@@ -1184,6 +1341,19 @@ p + p {
   .section-impact-protection-layout {
     padding: 26px;
   }
+
+  .section-multisport-performance {
+    padding: 80px 0;
+  }
+
+  .section-mobility-fit {
+    padding: 80px 0;
+  }
+
+  .section-mobility-fit-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1379,6 +1549,62 @@ p + p {
     gap: 24px;
     padding: 20px;
     border-radius: 22px;
+  }
+
+  .section-multisport-performance {
+    padding: 68px 0;
+  }
+
+  .section-multisport-performance-layout {
+    gap: 24px;
+  }
+
+  .section-multisport-performance-head h2 {
+    font-size: clamp(1.85rem, 7.6vw, 2.6rem);
+  }
+
+  .section-multisport-performance-head p,
+  .section-multisport-performance-copy p {
+    max-width: 31ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .section-multisport-performance-sports {
+    gap: 10px 18px;
+    font-size: 0.96rem;
+  }
+
+  .section-mobility-fit {
+    padding: 68px 0;
+  }
+
+  .section-mobility-fit-layout {
+    gap: 24px;
+  }
+
+  .section-mobility-fit-copy {
+    text-align: center;
+  }
+
+  .section-mobility-fit-copy h2 {
+    font-size: clamp(1.85rem, 7.4vw, 2.5rem);
+  }
+
+  .section-mobility-fit-copy p {
+    max-width: 31ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .section-mobility-fit-features {
+    justify-items: center;
+  }
+
+  .section-mobility-fit-features li {
+    text-align: left;
   }
 
   .section-impact-protection-copy {
