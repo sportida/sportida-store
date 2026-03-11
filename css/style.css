@@ -395,7 +395,7 @@ p + p {
   position: relative;
   background:
     linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
-  padding: 60px 0;
+  padding: 60px 0 52px;
 }
 
 .section-impact-protection::before,
@@ -409,12 +409,14 @@ p + p {
 .section-impact-protection-layout {
   display: grid;
   gap: 28px;
-  padding: 32px;
-  border: 1px solid rgba(39, 18, 105, 0.08);
-  border-radius: 28px;
+  padding: 36px;
+  border: 1px solid rgba(39, 18, 105, 0.12);
+  border-radius: 32px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 248, 255, 0.96) 100%);
-  box-shadow: 0 24px 60px rgba(17, 29, 58, 0.08);
+  box-shadow:
+    0 24px 60px rgba(17, 29, 58, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.72) inset;
 }
 
 .section-impact-protection-media img {
@@ -450,7 +452,18 @@ p + p {
 .section-multisport-performance {
   position: relative;
   background: #ffffff;
-  padding: 96px 0;
+  padding: 88px 0 56px;
+}
+
+.section-multisport-performance::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(246, 248, 252, 0.72) 100%);
+  pointer-events: none;
 }
 
 .section-multisport-performance-layout {
@@ -535,7 +548,18 @@ p + p {
 .section-mobility-fit {
   position: relative;
   background: #ffffff;
-  padding: 96px 0;
+  padding: 96px 0 56px;
+}
+
+.section-mobility-fit::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(246, 248, 252, 0.86) 100%);
+  pointer-events: none;
 }
 
 .section-mobility-fit-layout {
@@ -545,10 +569,27 @@ p + p {
   align-items: center;
 }
 
+.section-mobility-fit-media {
+  grid-column: 1 / -1;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+}
+
 .section-mobility-fit-media img {
-  width: min(100%, 620px);
-  border-radius: 16px;
-  box-shadow: 0 22px 56px rgba(17, 29, 58, 0.12);
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-mobility-fit-copy {
+  grid-column: 1 / -1;
+  width: min(760px, 92vw);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-mobility-fit-copy h2 {
@@ -560,6 +601,8 @@ p + p {
 
 .section-mobility-fit-copy p {
   max-width: 40ch;
+  margin-left: auto;
+  margin-right: auto;
   font-size: clamp(1rem, 2vw, 1.08rem);
   line-height: 1.76;
   color: rgba(16, 29, 52, 0.8);
@@ -571,6 +614,7 @@ p + p {
   margin: 28px 0 0;
   padding: 0;
   list-style: none;
+  justify-items: stretch;
 }
 
 .section-mobility-fit-features li {
@@ -584,6 +628,7 @@ p + p {
   color: #101d34;
   line-height: 1.6;
   text-align: left;
+  justify-self: stretch;
 }
 
 .section-mobility-fit-features li::before {
@@ -602,7 +647,18 @@ p + p {
 .section-size-guide {
   position: relative;
   background: #ffffff;
-  padding: 96px 0;
+  padding: 48px 0 72px;
+}
+
+.section-size-guide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(247, 249, 253, 0.88) 100%);
+  pointer-events: none;
 }
 
 .section-size-guide-layout {
@@ -610,6 +666,14 @@ p + p {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 44px;
   align-items: center;
+  padding: 36px;
+  border: 1px solid rgba(39, 18, 105, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 248, 255, 0.96) 100%);
+  box-shadow:
+    0 24px 60px rgba(17, 29, 58, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.72) inset;
 }
 
 .section-size-guide-media img {
@@ -663,7 +727,7 @@ p + p {
 .section-size-guide-table th,
 .section-size-guide-table td {
   padding: 16px 18px;
-  text-align: left;
+  text-align: center;
 }
 
 .section-size-guide-table th {
@@ -691,6 +755,100 @@ p + p {
   border: 1px solid rgba(70, 80, 151, 0.12);
   border-radius: 14px;
   background: #f8faff;
+}
+
+.section-athlete-benefits {
+  padding: 72px 0 88px;
+  background: #f7f9fd;
+}
+
+.section-athlete-benefits-layout {
+  display: grid;
+  gap: 30px;
+}
+
+.section-athlete-benefits-head {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-athlete-benefits-head h2 {
+  font-size: clamp(2rem, 4.8vw, 3.2rem);
+  line-height: 1.08;
+  color: #101d34;
+  margin-bottom: 14px;
+}
+
+.section-athlete-benefits-head p {
+  max-width: 34ch;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.72;
+  color: rgba(16, 29, 52, 0.78);
+}
+
+.section-athlete-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.section-athlete-benefit-card {
+  min-height: 100%;
+  padding: 28px 24px;
+  border: 1px solid rgba(39, 18, 105, 0.08);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 248, 255, 0.95) 100%);
+  box-shadow: 0 18px 42px rgba(17, 29, 58, 0.06);
+  text-align: center;
+}
+
+.section-athlete-benefit-icon {
+  display: inline-flex;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 18px;
+  border-radius: 22px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-athlete-benefit-icon::before {
+  content: none;
+}
+
+.section-athlete-benefit-icon-protection {
+  background-image: url("../images/icon-protection-without-bulk.png");
+}
+
+.section-athlete-benefit-icon-mobility {
+  background-image: url("../images/icon-knee-mobility.png");
+}
+
+.section-athlete-benefit-icon-fit {
+  background-image: url("../images/icon-secure-fit.png");
+}
+
+.section-athlete-benefit-card h3 {
+  font-size: clamp(1.2rem, 2.1vw, 1.45rem);
+  line-height: 1.22;
+  color: #101d34;
+  margin-bottom: 12px;
+}
+
+.section-athlete-benefit-card p {
+  max-width: 28ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: rgba(16, 29, 52, 0.78);
 }
 
 .section-amazon-reviews {
@@ -1763,15 +1921,15 @@ p + p {
   }
 
   .section-impact-protection-layout {
-    padding: 26px;
+    padding: 28px;
   }
 
   .section-multisport-performance {
-    padding: 80px 0;
+    padding: 72px 0 48px;
   }
 
   .section-mobility-fit {
-    padding: 80px 0;
+    padding: 68px 0 40px;
   }
 
   .section-mobility-fit-layout {
@@ -1780,12 +1938,22 @@ p + p {
   }
 
   .section-size-guide {
-    padding: 80px 0;
+    padding: 36px 0 56px;
   }
 
   .section-size-guide-layout {
     grid-template-columns: 1fr;
     gap: 28px;
+    padding: 28px;
+  }
+
+  .section-athlete-benefits {
+    padding: 56px 0 72px;
+  }
+
+  .section-athlete-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .section-amazon-reviews {
@@ -1981,7 +2149,7 @@ p + p {
   }
 
   .section-multisport-performance {
-    padding: 68px 0;
+    padding: 68px 0 44px;
   }
 
   .section-multisport-performance-layout {
@@ -2006,7 +2174,7 @@ p + p {
   }
 
   .section-mobility-fit {
-    padding: 68px 0;
+    padding: 68px 0 40px;
   }
 
   .section-mobility-fit-layout {
@@ -2014,6 +2182,7 @@ p + p {
   }
 
   .section-mobility-fit-copy {
+    width: min(680px, 92vw);
     text-align: center;
   }
 
@@ -2029,7 +2198,7 @@ p + p {
   }
 
   .section-mobility-fit-features {
-    justify-items: center;
+    justify-items: stretch;
   }
 
   .section-mobility-fit-features li {
@@ -2037,11 +2206,24 @@ p + p {
   }
 
   .section-size-guide {
-    padding: 68px 0;
+    padding: 36px 0 56px;
+  }
+
+  .section-size-guide::after {
+    height: 56px;
+  }
+
+  .section-multisport-performance::after,
+  .section-mobility-fit::after {
+    height: 56px;
   }
 
   .section-size-guide-layout {
     gap: 24px;
+  }
+
+  .section-athlete-benefits {
+    padding: 52px 0 68px;
   }
 
   .section-size-guide-copy {
