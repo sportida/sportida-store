@@ -86,7 +86,6 @@ img {
   text-align: center;
 }
 
-.transition-testimonials-head .eyebrow,
 .transition-testimonials-head h2,
 .transition-testimonials-head p {
   color: #ffffff;
@@ -96,23 +95,47 @@ img {
   color: rgba(244, 246, 255, 0.8);
 }
 
-.transition-testimonial-grid {
-  align-items: stretch;
+.transition-testimonials-head h2 {
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  line-height: 1.08;
+  margin: 0;
+  text-transform: none;
 }
 
-.transition-testimonial-card {
-  padding: 22px;
-  border: 1px solid rgba(22, 35, 62, 0.08);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 22px 44px rgba(17, 27, 46, 0.12);
+.section-transition-testimonials .section-amazon-reviews-marquee {
+  padding: 12px 0 16px;
 }
 
-.transition-testimonial-stars {
+.section-transition-testimonials .section-amazon-reviews-marquee::before {
+  background: linear-gradient(90deg, #dfe8f6 0%, rgba(223, 232, 246, 0) 100%);
+}
+
+.section-transition-testimonials .section-amazon-reviews-marquee::after {
+  background: linear-gradient(270deg, #f5f7fb 0%, rgba(245, 247, 251, 0) 100%);
+}
+
+.section-transition-testimonials .section-amazon-reviews-track {
+  animation-duration: 82s;
+}
+
+.section-transition-testimonials .amazon-review-card {
+  min-height: 176px;
+}
+
+.amazon-review-stars span {
   display: inline-block;
+}
+
+.amazon-review-stars .is-filled {
   color: var(--support-yellow);
-  font-size: 1.1rem;
-  letter-spacing: 0.14em;
+}
+
+.amazon-review-stars .is-outline {
+  color: rgba(70, 80, 151, 0.55);
+}
+
+.section-transition-testimonials .amazon-review-buyer {
+  color: var(--support-blue);
 }
 
 .section-head {
@@ -793,9 +816,10 @@ p + p {
 }
 
 .amazon-review-card {
+  font-family: "Montserrat", sans-serif;
   flex: 0 0 clamp(220px, 68vw, 260px);
   min-height: 164px;
-  padding: 18px 18px 20px;
+  padding: 22px 20px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(70, 80, 151, 0.08);
@@ -809,29 +833,35 @@ p + p {
 }
 
 .amazon-review-stars {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10px;
   color: #f3bf2d;
   font-size: 0.98rem;
   letter-spacing: 0.12em;
 }
 
 .amazon-review-quote {
-  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 14px;
   color: #101d34;
-  font-size: 0.98rem;
-  line-height: 1.62;
+  font-size: 18px;
+  line-height: 1.5;
   font-weight: 600;
   text-align: center;
   text-wrap: balance;
 }
 
 .amazon-review-buyer {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   color: #465097;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
+  opacity: 0.6;
   text-align: center;
 }
 
@@ -1574,6 +1604,10 @@ p + p {
     margin-bottom: 24px;
   }
 
+  .section-transition-testimonials .section-amazon-reviews-track {
+    animation-duration: 68s;
+  }
+
   .announcement-bar {
     height: 32px;
   }
@@ -1801,6 +1835,10 @@ p + p {
 
   .transition-testimonials-head h2 {
     font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .section-transition-testimonials .section-amazon-reviews-track {
+    animation-duration: 58s;
   }
 
   .transition-testimonial-card {
