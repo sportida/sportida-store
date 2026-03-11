@@ -2586,10 +2586,3 @@ p + p {
     max-width: 42ch;
   }
 }
-  .header-inner {
-    min-height: 68px;
-  }
-
-  .brand img {
-    height: 50px;
-  }
