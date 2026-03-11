@@ -74,7 +74,7 @@
     showStickyCta = isSmallViewport && window.scrollY > 700 && !footerIsVisible;
 
     if (backToTopButton) {
-      backToTopButton.classList.toggle("is-visible", showBackToTop && !footerIsVisible && !showStickyCta);
+      backToTopButton.classList.toggle("is-visible", showBackToTop && !footerIsVisible);
     }
 
     if (mobileStickyCta) {

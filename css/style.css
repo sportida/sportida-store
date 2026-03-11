@@ -2171,10 +2171,11 @@ p + p {
 
   .back-to-top {
     right: 14px;
-    bottom: 16px;
+    bottom: 76px;
     width: 42px;
     height: 42px;
     font-size: 20px;
+    z-index: 1002;
   }
 
   .hero-sportida {
