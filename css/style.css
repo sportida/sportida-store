@@ -58,6 +58,63 @@ img {
   background: #edf2fc;
 }
 
+.section-transition-testimonials {
+  position: relative;
+  padding: 52px 0 60px;
+  background:
+    linear-gradient(180deg, #0a1020 0%, #17233e 20%, #dfe8f6 72%, #f5f7fb 100%);
+}
+
+.section-transition-testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(241, 213, 60, 0.14) 0%, rgba(241, 213, 60, 0) 32%),
+    radial-gradient(circle at 78% 22%, rgba(143, 255, 255, 0.12) 0%, rgba(143, 255, 255, 0) 28%);
+}
+
+.transition-testimonials-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.transition-testimonials-head {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.transition-testimonials-head .eyebrow,
+.transition-testimonials-head h2,
+.transition-testimonials-head p {
+  color: #ffffff;
+}
+
+.transition-testimonials-head p {
+  color: rgba(244, 246, 255, 0.8);
+}
+
+.transition-testimonial-grid {
+  align-items: stretch;
+}
+
+.transition-testimonial-card {
+  padding: 22px;
+  border: 1px solid rgba(22, 35, 62, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 22px 44px rgba(17, 27, 46, 0.12);
+}
+
+.transition-testimonial-stars {
+  display: inline-block;
+  color: var(--support-yellow);
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+}
+
 .section-head {
   max-width: 720px;
   margin-bottom: 28px;
@@ -1507,6 +1564,16 @@ p + p {
     padding-top: 32px;
   }
 
+  .section-transition-testimonials {
+    padding: 44px 0 52px;
+    background:
+      linear-gradient(180deg, #0a1020 0%, #1a2947 26%, #e5ecf7 74%, #f5f7fb 100%);
+  }
+
+  .transition-testimonials-head {
+    margin-bottom: 24px;
+  }
+
   .announcement-bar {
     height: 32px;
   }
@@ -1726,6 +1793,19 @@ p + p {
 @media (max-width: 640px) {
   body {
     padding-top: 30px;
+  }
+
+  .section-transition-testimonials {
+    padding: 38px 0 46px;
+  }
+
+  .transition-testimonials-head h2 {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+  }
+
+  .transition-testimonial-card {
+    padding: 18px;
+    border-radius: 18px;
   }
 
   .announcement-bar {
