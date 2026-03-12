@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -254,7 +254,12 @@ p {
   }
 
   .hero {
-    min-height: 68vh;
+    min-height: 76vh;
+    align-items: end;
+  }
+
+  .hero__content {
+    padding-bottom: 2.2rem;
   }
 
   .content-card {
