@@ -108,6 +108,49 @@ a {
   font-size: clamp(1rem, 2.1vw, 1.25rem);
 }
 
+.secondary-hero {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: clamp(300px, 48vw, 460px);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--stroke);
+}
+
+.secondary-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.secondary-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(10, 16, 28, 0.72) 0%, rgba(10, 16, 28, 0.45) 52%, rgba(10, 16, 28, 0.12) 100%);
+}
+
+.secondary-hero__content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  max-width: 700px;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+}
+
+.secondary-hero__content h2 {
+  border-left: 0;
+  padding-left: 0;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 3.1vw, 2.3rem);
+}
+
+.secondary-hero__content p {
+  color: #e5eaf4;
+  margin-bottom: 1.2rem;
+}
+
 .btn {
   display: inline-block;
   border: 0;
@@ -279,6 +322,10 @@ a {
 
   .hero__content {
     padding-bottom: 2.2rem;
+  }
+
+  .secondary-hero {
+    min-height: 360px;
   }
 
   .content-card {
