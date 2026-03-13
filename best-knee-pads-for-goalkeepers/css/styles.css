@@ -316,7 +316,7 @@ a {
   }
 
   .hero {
-    min-height: 76vh;
+    min-height: 76.0vh;
     align-items: end;
   }
 
