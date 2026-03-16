@@ -1666,6 +1666,105 @@ p + p {
   padding: 72px 0 28px;
 }
 
+.sportida-guides {
+  background: #ffffff;
+  padding: 100px 0;
+}
+
+.sportida-guides-container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sportida-guides h2 {
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  line-height: 1.12;
+  color: #101d34;
+}
+
+.sportida-guides p {
+  max-width: 50ch;
+  margin: 16px auto 0;
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.72;
+  color: rgba(16, 29, 52, 0.78);
+}
+
+.sportida-guides-grid {
+  margin: 30px auto 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.sportida-guides-card {
+  padding: 22px 22px 20px;
+  border: 1px solid rgba(39, 18, 105, 0.12);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(242, 246, 255, 0.96) 0%, rgba(236, 242, 255, 0.94) 100%);
+  box-shadow: 0 10px 24px rgba(17, 29, 58, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sportida-guides-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(17, 29, 58, 0.11);
+  border-color: rgba(39, 18, 105, 0.24);
+}
+
+.sportida-guides-card h3 {
+  margin: 0;
+}
+
+.sportida-guides-title-link {
+  color: #101d34;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: color 0.2s ease, background-size 0.24s ease;
+}
+
+.sportida-guides-title-link:hover {
+  color: var(--primary);
+  background-size: 100% 1px;
+}
+
+.sportida-guides-card p {
+  max-width: none;
+  margin: 10px 0 14px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(16, 29, 52, 0.74);
+}
+
+.sportida-guides-learn-link {
+  display: inline-block;
+  color: var(--primary-dark);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: color 0.2s ease, background-size 0.24s ease;
+}
+
+.sportida-guides-learn-link:hover {
+  color: var(--primary);
+  background-size: 100% 1px;
+}
+
 .footer-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -2516,6 +2615,15 @@ p + p {
 
   .feature-item-copy p {
     font-size: 0.95rem;
+  }
+
+  .sportida-guides {
+    padding: 72px 0;
+  }
+
+  .sportida-guides-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
