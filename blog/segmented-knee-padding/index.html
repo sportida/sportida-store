@@ -96,6 +96,48 @@
         object-fit: cover;
         object-position: center 42%;
       }
+
+      .article-topbar {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+      }
+
+      .article-topbar__inner {
+        width: min(1100px, 92%);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .article-topbar a {
+        text-decoration: none;
+      }
+
+      .back-link {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .brand-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .brand-link img {
+        width: 28px;
+        height: 28px;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -110,6 +152,15 @@
         height="1080"
       />
       <div class="hero__overlay"></div>
+      <div class="article-topbar" aria-label="Article navigation">
+        <div class="article-topbar__inner">
+          <a class="back-link" href="/blog/" aria-label="Back to Blog">Back to Blog</a>
+          <a class="brand-link" href="/" aria-label="Sportida Home">
+            <span>Sportida</span>
+            <img src="/images/Logo-Sportida.co.png" alt="Sportida logo" loading="eager" decoding="async" />
+          </a>
+        </div>
+      </div>
       <div class="container hero__content">
         <h1>Protection Without Bulk: Why Segmented Knee Pads Make the Difference</h1>
         <p class="hero__subtitle">
