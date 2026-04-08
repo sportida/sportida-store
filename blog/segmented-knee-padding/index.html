@@ -90,6 +90,12 @@
         font-size: 0.95rem;
         color: #4b5563;
       }
+
+      .content-image--zoom {
+        height: clamp(360px, 58vw, 640px);
+        object-fit: cover;
+        object-position: center 42%;
+      }
     </style>
   </head>
   <body>
@@ -149,7 +155,7 @@
               loading="lazy"
               width="1200"
               height="800"
-              class="content-image"
+              class="content-image content-image--zoom"
             />
             <figcaption class="image-caption">
               Segmented padding allows each section to move independently, following the natural bend of the knee.
@@ -167,6 +173,19 @@
             <li>Reduces pressure concentration during repeated contact with hard or abrasive surfaces.</li>
             <li>Improves movement by flexing with the knee instead of fighting against it.</li>
           </ul>
+          <figure class="media-card">
+            <img
+              src="../../s6764/images/wrestling-knee-pad-impact-protection.png"
+              alt="Close-up of segmented knee pad zones during wrestling mat contact"
+              loading="lazy"
+              width="1200"
+              height="800"
+              class="content-image"
+            />
+            <figcaption class="image-caption">
+              Segmented zones absorb force while preserving knee flexion through contact.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
