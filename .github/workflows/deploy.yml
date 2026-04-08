@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: ./
+          server-dir: domains/sportida.store/public_html/
 
       - name: Retry deploy to Hostinger via FTP
         if: steps.ftp_deploy_first_try.outcome == 'failure'
@@ -40,4 +40,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: ./
+          server-dir: domains/sportida.store/public_html/
