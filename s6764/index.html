@@ -156,11 +156,26 @@
         "dateModified": "2026-03-16"
       }
     </script>
-    <link rel="stylesheet" href="css/style.css?v=20260916c">
+    <link rel="stylesheet" href="css/style.css?v=20260916e">
   </head>
   <body>
+    <div class="announcement-bar shopify-announcement" aria-label="Announcement">
+      <span>Welcome to our store</span>
+    </div>
     <header class="site-header site-header--shopify" id="top">
       <div class="container header-inner">
+        <div class="header-mobile-left" aria-label="Mobile controls">
+          <button class="menu-toggle shopify-icon-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+          </button>
+          <a class="shopify-icon-button" href="#hero" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.6"></circle>
+              <path d="m16 16 4.6 4.6"></path>
+            </svg>
+          </a>
+        </div>
+
         <a class="brand" href="#top" aria-label="Sportida home">
           <span class="brand-wordmark">Sportida</span>
         </a>
@@ -171,16 +186,19 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <div class="header-actions">
-          <a
-            class="header-amazon-cta"
-            data-track="header_amazon_cta"
-            href="https://www.amazon.com/dp/B0G5Q1F6M6?maas=maas_adg_C615474A6660A0DF6EE9560FE0F2A9FB_afap_abs&amp;ref_=aa_maas&amp;tag=maas&amp;th=1"
-            onclick="return gtag_report_conversion('https://www.amazon.com/dp/B0G5Q1F6M6?maas=maas_adg_C615474A6660A0DF6EE9560FE0F2A9FB_afap_abs&amp;ref_=aa_maas&amp;tag=maas&amp;th=1');"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View Sportida Knee Pads on Amazon"
-          >Buy on Amazon <span aria-hidden="true">→</span></a>
+        <div class="header-actions" aria-label="Store controls">
+          <a class="shopify-icon-button" href="#contact" aria-label="Account">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"></circle>
+              <path d="M5.5 20c.8-3.3 3-5 6.5-5s5.7 1.7 6.5 5"></path>
+            </svg>
+          </a>
+          <a class="shopify-icon-button" href="#hero" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 8.5h14l-1 12H6l-1-12Z"></path>
+              <path d="M9 9V6.5a3 3 0 0 1 6 0V9"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </header>
