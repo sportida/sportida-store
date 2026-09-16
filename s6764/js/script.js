@@ -194,3 +194,53 @@
   }
 
 })();
+
+
+/* Shopify PDP migration: gallery and size selector */
+(() => {
+  const gallery = document.querySelector("[data-product-pdp-gallery]");
+  if (gallery) {
+    const mainImage = gallery.querySelector("[data-product-main-image]");
+    const thumbnails = Array.from(gallery.querySelectorAll("[data-product-thumb]"));
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", () => {
+        const imageSrc = thumbnail.getAttribute("data-image-src");
+        const imageAlt = thumbnail.getAttribute("data-image-alt") || "Sportida Knee Pads";
+        if (!mainImage || !imageSrc) return;
+
+        mainImage.src = imageSrc;
+        mainImage.alt = imageAlt;
+        thumbnails.forEach((item) => {
+          const active = item === thumbnail;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-current", active ? "true" : "false");
+        });
+      });
+    });
+  }
+
+  const sizeButtons = Array.from(document.querySelectorAll("[data-product-size]"));
+  const selectedSize = document.querySelector("[data-selected-size]");
+
+  sizeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const size = button.getAttribute("data-product-size");
+      if (!size) return;
+
+      sizeButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-selected", active);
+        item.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      if (selectedSize) selectedSize.textContent = size;
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "size_select", {
+          product_id: "S6764",
+          size
+        });
+      }
+    });
+  });
+})();
