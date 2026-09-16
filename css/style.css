@@ -3454,3 +3454,32 @@ body {
     font-size: 1.12rem;
   }
 }
+
+
+/* Header parity correction: announcement must remain in document flow */
+.shopify-announcement {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+@media (max-width: 720px) {
+  .shopify-announcement {
+    position: relative;
+    display: flex;
+    min-height: 57px;
+    align-items: center;
+    justify-content: center;
+    color: #151515;
+    background: #ffffff;
+  }
+
+  .site-header.site-header--shopify {
+    z-index: 20;
+  }
+}
