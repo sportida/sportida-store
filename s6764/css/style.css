@@ -3221,3 +3221,236 @@ body {
     gap: 24px;
   }
 }
+
+
+/* Shopify header parity: desktop and mobile */
+body {
+  padding-top: 0;
+}
+
+.shopify-announcement {
+  display: none;
+}
+
+.site-header.site-header--shopify {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  z-index: 20;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.10);
+}
+
+.site-header--shopify .header-inner {
+  position: relative;
+  width: min(1280px, calc(100% - 48px));
+  min-height: 68px;
+  padding: 0;
+  gap: 42px;
+}
+
+.site-header--shopify .brand {
+  flex: 0 0 auto;
+  color: #141414;
+}
+
+.site-header--shopify .brand-wordmark {
+  display: inline-block;
+  color: #141414;
+  font-size: 1.24rem;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.site-header--shopify .main-nav {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  gap: 34px;
+  margin-left: 4px;
+  padding: 0;
+  overflow: visible;
+  color: #202020;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.site-header--shopify .main-nav a {
+  display: inline-flex;
+  min-height: 68px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #202020;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  transition: color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-header--shopify .main-nav a:hover,
+.site-header--shopify .main-nav a:focus-visible {
+  background: transparent;
+  border: 0;
+  color: #25156d;
+  box-shadow: inset 0 -2px 0 #25156d;
+  transform: none;
+}
+
+.site-header--shopify .header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  gap: 24px;
+}
+
+.header-mobile-left {
+  display: none;
+}
+
+.shopify-icon-button {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111111;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.shopify-icon-button:hover,
+.shopify-icon-button:focus-visible {
+  color: #25156d;
+  transform: translateY(-1px);
+}
+
+.shopify-icon-button svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.shopify-icon-button.menu-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shopify-icon-button.menu-toggle span {
+  display: block;
+  width: 17px;
+  height: 2px;
+  background: currentColor;
+}
+
+@media (max-width: 720px) {
+  .shopify-announcement {
+    display: flex;
+    min-height: 57px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.10);
+    color: #151515;
+    font-size: 0.94rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .site-header--shopify .header-inner {
+    width: 100%;
+    min-height: 86px;
+    padding: 0 20px;
+    gap: 0;
+  }
+
+  .header-mobile-left {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    flex: 0 0 76px;
+  }
+
+  .site-header--shopify .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .site-header--shopify .brand-wordmark {
+    font-size: 1.20rem;
+  }
+
+  .site-header--shopify .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 4px 26px 10px;
+    background: #ffffff;
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+    border-bottom: 1px solid rgba(18, 18, 18, 0.10);
+    box-shadow: 0 12px 22px rgba(16, 16, 16, 0.10);
+  }
+
+  .site-header--shopify .main-nav.is-open {
+    display: flex;
+  }
+
+  .site-header--shopify .main-nav a {
+    min-height: 48px;
+    justify-content: flex-start;
+    padding: 0;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    color: #202020;
+  }
+
+  .site-header--shopify .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .site-header--shopify .header-actions {
+    gap: 23px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header--shopify .header-inner {
+    padding: 0 16px;
+  }
+
+  .header-mobile-left {
+    gap: 23px;
+    flex-basis: 68px;
+  }
+
+  .site-header--shopify .header-actions {
+    gap: 19px;
+  }
+
+  .site-header--shopify .brand-wordmark {
+    font-size: 1.12rem;
+  }
+}
