@@ -3655,3 +3655,174 @@ body {
     padding-inline: 23px;
   }
 }
+
+
+/* Shopify mobile PDP continuation: details, CTA and trust strip */
+.shopify-details {
+  background: #21165f;
+  color: #ffffff;
+}
+
+.shopify-details-inner {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 0 27px 48px;
+}
+
+.shopify-details h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.shopify-details-intro {
+  max-width: 32ch;
+  margin: 20px 0 0;
+  color: #ffffff;
+  font-size: clamp(1.05rem, 4.2vw, 1.32rem);
+  line-height: 1.5;
+}
+
+.shopify-details-sports {
+  margin: 29px 0 0;
+  color: #77ffff;
+  font-size: clamp(0.95rem, 3.9vw, 1.16rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.shopify-details-sizes {
+  margin: 25px 0 0;
+  color: #ffffff;
+  font-size: clamp(0.95rem, 3.9vw, 1.14rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  line-height: 1.35;
+}
+
+.shopify-details-sizes span {
+  white-space: nowrap;
+}
+
+.shopify-details-amazon {
+  display: grid;
+  grid-template-columns: 60px 1fr 42px;
+  min-height: 80px;
+  align-items: center;
+  margin-top: 31px;
+  padding: 0 18px 0 27px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #fff000;
+  color: #111111;
+  font-size: clamp(1.15rem, 5vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.shopify-details-amazon:hover,
+.shopify-details-amazon:focus-visible {
+  background: #ffe42b;
+  color: #111111;
+  transform: translateY(-1px);
+}
+
+.shopify-details-amazon-mark {
+  position: relative;
+  justify-self: start;
+  font-family: Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: -0.16em;
+  line-height: 0.7;
+}
+
+.shopify-details-amazon-mark > span {
+  display: block;
+  margin: 3px 0 0 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  transform: rotate(12deg);
+}
+
+.shopify-details-amazon-arrow {
+  justify-self: end;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.shopify-details-trust {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1.12fr;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: clamp(0.62rem, 2.3vw, 0.82rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.shopify-details-trust span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.shopify-details-trust svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.shopify-details-trust i {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (min-width: 721px) {
+  .shopify-details {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .shopify-details-inner {
+    padding-inline: 23px;
+  }
+
+  .shopify-details-amazon {
+    grid-template-columns: 48px 1fr 30px;
+    min-height: 75px;
+    padding-inline: 20px 14px;
+  }
+
+  .shopify-details-trust {
+    gap: 5px;
+    font-size: 0.58rem;
+  }
+
+  .shopify-details-trust span {
+    gap: 3px;
+  }
+
+  .shopify-details-trust svg {
+    width: 15px;
+    height: 15px;
+    flex-basis: 15px;
+  }
+}
