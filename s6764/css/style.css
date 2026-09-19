@@ -4371,3 +4371,49 @@ body {
       linear-gradient(180deg, #e4e1f8 0%, #8175bb 100%);
   }
 }
+
+
+/* Shopify PDP migration pass 15: purple fade into text block */
+.product-proof-media {
+  background:
+    radial-gradient(
+      ellipse at 50% 36%,
+      rgba(231, 232, 236, 0.98) 0%,
+      rgba(220, 221, 229, 0.96) 48%,
+      rgba(203, 201, 218, 0.92) 70%,
+      rgba(135, 125, 186, 0.86) 86%,
+      rgba(66, 52, 126, 0.96) 96%,
+      #1a114d 100%
+    ),
+    linear-gradient(
+      180deg,
+      #e7e8ec 0%,
+      #e7e8ec 54%,
+      #c8c4db 72%,
+      #877dbb 88%,
+      #1a114d 100%
+    );
+}
+
+@media (max-width: 420px) {
+  .product-proof-media {
+    background:
+      radial-gradient(
+        ellipse at 50% 34%,
+        rgba(235, 236, 240, 0.98) 0%,
+        rgba(223, 224, 232, 0.96) 47%,
+        rgba(204, 202, 219, 0.92) 69%,
+        rgba(136, 126, 186, 0.86) 85%,
+        rgba(66, 52, 126, 0.96) 96%,
+        #1a114d 100%
+      ),
+      linear-gradient(
+        180deg,
+        #ebecf0 0%,
+        #ebecf0 52%,
+        #cac6dd 71%,
+        #887dbb 88%,
+        #1a114d 100%
+      );
+  }
+}
