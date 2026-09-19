@@ -3901,3 +3901,12 @@ body {
     font-size: clamp(1rem, 3vw, 1.15rem);
   }
 }
+
+
+/* Shopify parity pass 4: make the knee pads the hero focal point */
+@media (max-width: 720px) {
+  .shopify-hero-visual > img {
+    transform: scale(1.45);
+    transform-origin: center 58%;
+  }
+}
