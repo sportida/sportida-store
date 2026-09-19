@@ -4813,3 +4813,240 @@ body {
     );
   }
 }
+
+
+/* Final remaining sections: compact multi-sport, cinematic mobility, functional sizing */
+.section-multisport-performance {
+  padding: 64px 0 52px;
+  background: #f6f8fc;
+}
+
+.section-multisport-performance::after {
+  height: 40px;
+  background: linear-gradient(180deg, rgba(246, 248, 252, 0) 0%, rgba(229, 231, 235, 0.72) 100%);
+}
+
+.section-multisport-performance-head h2,
+.section-mobility-fit-copy h2,
+.section-size-guide-copy h2 {
+  letter-spacing: -0.045em;
+}
+
+.section-multisport-performance-head h2 {
+  color: #1a114d;
+}
+
+.section-multisport-performance-head p,
+.section-multisport-performance-copy p {
+  line-height: 1.58;
+}
+
+.section-multisport-performance-media img {
+  border-radius: 20px;
+  box-shadow: 0 20px 48px rgba(26, 17, 77, 0.12);
+}
+
+.section-multisport-performance-copy {
+  max-width: 36ch;
+}
+
+.section-multisport-performance-sports {
+  gap: 8px;
+  color: #1a114d;
+}
+
+.section-multisport-performance-sports li {
+  padding: 8px 13px;
+  border: 1px solid rgba(39, 18, 105, 0.14);
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 0.88rem;
+}
+
+.section-multisport-performance-sports li::before {
+  display: none;
+}
+
+.section-mobility-fit {
+  padding: 0;
+  overflow: hidden;
+  background: #1a114d;
+  color: #ffffff;
+}
+
+.section-mobility-fit::after {
+  display: none;
+}
+
+.section-mobility-fit-media {
+  position: relative;
+  background: #1a114d;
+}
+
+.section-mobility-fit-media::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(26, 17, 77, 0) 0%, rgba(26, 17, 77, 0.38) 48%, #1a114d 100%);
+}
+
+.section-mobility-fit-copy {
+  width: min(760px, 100%);
+  padding: 48px 28px 58px;
+  background: #1a114d;
+  text-align: left;
+}
+
+.section-mobility-fit-copy h2 {
+  max-width: 12ch;
+  color: #ffffff;
+  font-size: clamp(2.15rem, 6vw, 3.4rem);
+}
+
+.section-mobility-fit-copy p {
+  max-width: 34ch;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.62;
+}
+
+.section-mobility-fit-features {
+  gap: 0;
+  margin-top: 24px;
+}
+
+.section-mobility-fit-features li {
+  padding: 14px 0 14px 28px;
+  border: 0;
+  border-top: 1px solid rgba(143, 255, 255, 0.2);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.section-mobility-fit-features li:last-child {
+  border-bottom: 1px solid rgba(143, 255, 255, 0.2);
+}
+
+.section-mobility-fit-features li::before {
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #8fffff;
+  box-shadow: 0 0 0 5px rgba(143, 255, 255, 0.12);
+}
+
+.section-size-guide {
+  padding: 56px 0 72px;
+  background: #f4f6fa;
+}
+
+.section-size-guide::after {
+  height: 40px;
+  background: linear-gradient(180deg, rgba(244, 246, 250, 0) 0%, rgba(26, 17, 77, 0.12) 100%);
+}
+
+.section-size-guide-layout {
+  border-color: rgba(26, 17, 77, 0.1);
+  background: #ffffff;
+  box-shadow: 0 20px 48px rgba(26, 17, 77, 0.08);
+}
+
+.section-size-guide-copy h2 {
+  color: #1a114d;
+}
+
+.section-size-guide-table th {
+  background: #eef1f8;
+  color: #1a114d;
+}
+
+@media (max-width: 720px) {
+  .section-multisport-performance {
+    padding: 56px 0 44px;
+  }
+
+  .section-multisport-performance-layout {
+    gap: 20px;
+  }
+
+  .section-multisport-performance-head h2 {
+    max-width: 12ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.9rem, 8vw, 2.65rem);
+  }
+
+  .section-multisport-performance-head p,
+  .section-multisport-performance-copy p {
+    max-width: 30ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-multisport-performance-media img {
+    border-radius: 16px;
+  }
+
+  .section-multisport-performance-sports {
+    justify-content: flex-start;
+    padding-inline: 2px;
+  }
+
+  .section-multisport-performance-sports li {
+    font-size: 0.82rem;
+  }
+
+  .section-mobility-fit-media img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section-mobility-fit-media::after {
+    height: 142px;
+  }
+
+  .section-mobility-fit-copy {
+    padding: 42px 23px 50px;
+  }
+
+  .section-mobility-fit-copy h2 {
+    max-width: 11ch;
+    font-size: clamp(2.25rem, 10vw, 3.25rem);
+  }
+
+  .section-mobility-fit-copy p {
+    max-width: 31ch;
+  }
+
+  .section-size-guide {
+    padding: 38px 0 56px;
+  }
+
+  .section-size-guide-layout {
+    gap: 22px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .section-size-guide-table th,
+  .section-size-guide-table td {
+    padding: 13px 9px;
+  }
+
+  .section-size-guide-table th {
+    font-size: 0.72rem;
+    letter-spacing: 0.035em;
+  }
+
+  .section-size-guide-table td {
+    font-size: 0.86rem;
+  }
+}
