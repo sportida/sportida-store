@@ -4436,7 +4436,7 @@ body {
 /* Shopify PDP migration pass 19: match reference product-image composition */
 @media (max-width: 420px) {
   .product-proof-media {
-    padding: 52px 12px 0;
+    padding: 52px 12px 76px;
     background: #f1f2f4;
   }
 
