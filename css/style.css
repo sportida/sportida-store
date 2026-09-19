@@ -3902,15 +3902,11 @@ body {
   }
 }
 
-
-/* Shopify parity pass 4: mobile product-first hero framing and clearer hierarchy */
+/* Shopify parity pass 4: product-first hero framing */
 @media (max-width: 720px) {
   .shopify-hero-visual > img {
-    width: 112%;
-    max-width: none;
-    margin-left: -12%;
-    object-fit: cover;
-    object-position: 42% 62%;
+    transform: scale(1.45);
+    transform-origin: center 58%;
   }
 
   .shopify-details h2 {
