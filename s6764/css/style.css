@@ -4423,12 +4423,12 @@ body {
   }
 }
 
-/* Shopify PDP migration pass 17: enlarge product pair on mobile */
+/* Shopify PDP migration pass 18: restore previous mobile product scale */
 @media (max-width: 420px) {
   .product-proof-media img {
-    width: 110%;
-    max-width: none;
-    margin-left: -5%;
-    transform: translateY(-8px);
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
   }
 }
