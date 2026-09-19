@@ -3902,11 +3902,17 @@ body {
   }
 }
 
-
-/* Shopify parity pass 4: make the knee pads the hero focal point */
+/* Shopify parity pass 4: product-first hero framing */
 @media (max-width: 720px) {
   .shopify-hero-visual > img {
     transform: scale(1.45);
     transform-origin: center 58%;
+  }
+
+  .shopify-details h2 {
+    font-size: clamp(1.72rem, 5.7vw, 2.3rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
   }
 }
