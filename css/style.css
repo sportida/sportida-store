@@ -4123,3 +4123,17 @@ body {
     margin-top: 22px;
   }
 }
+
+
+/* Shopify parity pass 9: Amazon mark closer to CTA label */
+@media (max-width: 720px) {
+  .shopify-details-amazon {
+    grid-template-columns: 38px 1fr 30px;
+    padding-left: 20px;
+    padding-right: 14px;
+  }
+
+  .shopify-details-amazon-mark {
+    transform: translateX(15px);
+  }
+}
