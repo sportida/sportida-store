@@ -4771,3 +4771,45 @@ body {
     transform: none;
   }
 }
+
+/* Product proof mobile composition: full-bleed action image with section fades */
+@media (max-width: 720px) {
+  .product-proof-media {
+    padding: 0;
+    background: #e5e7eb;
+  }
+
+  .product-proof-media img {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    filter: none;
+  }
+
+  .product-proof-media::before {
+    top: 0;
+    height: 84px;
+    background: linear-gradient(
+      180deg,
+      #1a114d 0%,
+      rgba(26, 17, 77, 0.78) 26%,
+      rgba(26, 17, 77, 0.22) 68%,
+      rgba(229, 231, 235, 0) 100%
+    );
+  }
+
+  .product-proof-media::after {
+    bottom: 0;
+    height: 150px;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 231, 235, 0) 0%,
+      rgba(229, 231, 235, 0.06) 18%,
+      rgba(26, 17, 77, 0.52) 70%,
+      #1a114d 100%
+    );
+  }
+}
