@@ -4302,3 +4302,44 @@ body {
     font-size: clamp(2.38rem, 10vw, 3.2rem);
   }
 }
+
+
+/* Shopify PDP migration pass 13: cinematic transparent product image */
+.product-proof {
+  background: #1a114d;
+}
+
+.product-proof-media {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 18px 24px;
+  background:
+    radial-gradient(
+      ellipse at 50% 55%,
+      rgba(103, 87, 214, 0.52) 0%,
+      rgba(62, 46, 148, 0.28) 34%,
+      rgba(26, 17, 77, 0) 68%
+    ),
+    linear-gradient(180deg, #1a114d 0%, #140b3b 100%);
+}
+
+.product-proof-media img {
+  position: relative;
+  z-index: 1;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 28px 26px rgba(0, 0, 0, 0.42));
+}
+
+@media (min-width: 721px) {
+  .product-proof-media {
+    padding: 64px;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-proof-media {
+    padding: 24px 12px 20px;
+  }
+}
