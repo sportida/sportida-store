@@ -3496,6 +3496,42 @@ body {
 }
 
 
+/* Review sequence correction: light feature section followed by purple proof */
+.section-impact-protection {
+  background: #ffffff;
+}
+
+.section-impact-protection-layout {
+  background: #ffffff;
+}
+
+.section-impact-protection-copy {
+  background: #ffffff;
+}
+
+.section-impact-protection-copy .feature-item {
+  background: #f6f7fa;
+}
+
+.reviews-legacy {
+  display: none;
+}
+
+.section-transition-testimonials:not(.reviews-legacy) .amazon-review-card:nth-child(n + 4) {
+  display: grid;
+}
+
+.section-transition-testimonials:not(.reviews-legacy) .amazon-review-card:nth-child(n + 7) {
+  display: none;
+}
+
+@media (min-width: 921px) {
+  .section-transition-testimonials:not(.reviews-legacy) .section-amazon-reviews-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
 /* Shopify header parity: desktop and mobile */
 body {
   padding-top: 0;
