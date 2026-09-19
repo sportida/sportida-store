@@ -3901,3 +3901,22 @@ body {
     font-size: clamp(1rem, 3vw, 1.15rem);
   }
 }
+
+
+/* Shopify parity pass 4: mobile product-first hero framing and clearer hierarchy */
+@media (max-width: 720px) {
+  .shopify-hero-visual > img {
+    width: 112%;
+    max-width: none;
+    margin-left: -12%;
+    object-fit: cover;
+    object-position: 42% 62%;
+  }
+
+  .shopify-details h2 {
+    font-size: clamp(1.72rem, 5.7vw, 2.3rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+  }
+}
