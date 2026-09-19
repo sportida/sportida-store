@@ -3883,3 +3883,21 @@ body {
     font-size: clamp(2.55rem, 9vw, 3.2rem);
   }
 }
+
+
+/* Shopify parity pass 3: goalkeeper action hero and title fit */
+.shopify-hero-visual > img {
+  object-position: center 54%;
+}
+
+@media (max-width: 720px) {
+  .shopify-hero-copy h1 {
+    max-width: none;
+    font-size: clamp(2.35rem, 8.5vw, 3.55rem);
+    letter-spacing: -0.07em;
+  }
+
+  .shopify-details-intro {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+  }
+}
