@@ -4159,3 +4159,50 @@ body {
     );
   }
 }
+
+
+/* Shopify parity pass 11: Amazon CTA colors and embedded smile */
+.shopify-details-amazon {
+  background: #ffd814;
+}
+
+.shopify-details-amazon:hover,
+.shopify-details-amazon:focus-visible {
+  background: #f7ca00;
+}
+
+.shopify-details-amazon-mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  width: 44px;
+  height: 47px;
+  transform: translateX(15px);
+}
+
+.shopify-details-amazon-letter {
+  display: block;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #111111;
+  font-size: 2.65rem;
+  font-weight: 400;
+  letter-spacing: -0.16em;
+  line-height: 0.68;
+  transform: none;
+}
+
+.shopify-details-amazon-mark > img {
+  display: block;
+  width: 36px;
+  height: auto;
+  margin-top: -1px;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .shopify-details-amazon-mark {
+    transform: translateX(15px);
+  }
+}
