@@ -4343,3 +4343,31 @@ body {
     padding: 24px 12px 20px;
   }
 }
+
+
+/* Shopify PDP migration pass 14: lighter cinematic product backdrop */
+.product-proof-media {
+  background:
+    radial-gradient(
+      ellipse at 50% 38%,
+      #dedbf5 0%,
+      #c8c4eb 42%,
+      #a69bd5 76%,
+      #8175bb 100%
+    ),
+    linear-gradient(180deg, #dedbf5 0%, #8175bb 100%);
+}
+
+@media (max-width: 420px) {
+  .product-proof-media {
+    background:
+      radial-gradient(
+        ellipse at 50% 36%,
+        #e4e1f8 0%,
+        #cbc7ec 42%,
+        #a79bd6 76%,
+        #8175bb 100%
+      ),
+      linear-gradient(180deg, #e4e1f8 0%, #8175bb 100%);
+  }
+}
