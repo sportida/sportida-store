@@ -2820,8 +2820,8 @@ p + p {
   width: 12px;
   height: 12px;
   margin-top: 0.34rem;
-  background: #18c89a;
-  box-shadow: 0 0 0 5px rgba(24, 200, 154, 0.14);
+  background: #8fffff;
+  box-shadow: 0 0 0 5px rgba(143, 255, 255, 0.16);
 }
 
 .section-impact-protection-copy .feature-item-copy h3 {
@@ -3521,7 +3521,7 @@ body {
   display: grid;
 }
 
-.section-transition-testimonials:not(.reviews-legacy) .amazon-review-card:nth-child(n + 7) {
+.section-transition-testimonials:not(.reviews-legacy) .amazon-review-card:nth-child(n + 11) {
   display: none;
 }
 
