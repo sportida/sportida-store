@@ -4067,3 +4067,11 @@ body {
     text-shadow: 0 1px 4px rgba(12, 8, 47, 0.45);
   }
 }
+
+
+/* Shopify parity pass 7: final knee-pad focal alignment */
+@media (max-width: 720px) {
+  .shopify-hero-visual > img {
+    object-position: 54% 68%;
+  }
+}
