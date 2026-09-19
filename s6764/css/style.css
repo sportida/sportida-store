@@ -4432,3 +4432,33 @@ body {
     transform: none;
   }
 }
+
+/* Shopify PDP migration pass 19: match reference product-image composition */
+@media (max-width: 420px) {
+  .product-proof-media {
+    padding: 52px 12px 0;
+    background: #f1f2f4;
+  }
+
+  .product-proof-media::before {
+    display: none;
+  }
+
+  .product-proof-media::after {
+    height: 112px;
+    background: linear-gradient(
+      180deg,
+      rgba(241, 242, 244, 0) 0%,
+      rgba(232, 232, 238, 0.2) 22%,
+      rgba(142, 136, 180, 0.55) 62%,
+      #1a114d 100%
+    );
+  }
+
+  .product-proof-media img {
+    width: 88%;
+    max-width: 100%;
+    margin: 0 auto;
+    transform: none;
+  }
+}
