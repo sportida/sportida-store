@@ -3826,3 +3826,60 @@ body {
     flex-basis: 15px;
   }
 }
+
+
+/* Shopify parity pass 2: announcement, heading wrap and vertical rhythm */
+.shopify-announcement {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .shopify-announcement {
+    display: flex !important;
+    min-height: 64px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+    color: #151515;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .site-header--shopify .header-inner {
+    min-height: 90px;
+  }
+
+  .shopify-hero-copy {
+    padding-top: 38px;
+    padding-bottom: 34px;
+  }
+
+  .shopify-hero-copy h1 {
+    max-width: none;
+    font-size: clamp(2.55rem, 9vw, 4rem);
+    line-height: 0.92;
+  }
+
+  .shopify-details h2 {
+    font-size: clamp(2rem, 6.6vw, 2.75rem);
+  }
+
+  .shopify-details-intro {
+    max-width: none;
+    font-size: clamp(1rem, 3.35vw, 1.2rem);
+    line-height: 1.48;
+  }
+}
+
+@media (max-width: 420px) {
+  .shopify-hero-copy {
+    padding-bottom: 30px;
+  }
+
+  .shopify-hero-copy h1 {
+    font-size: clamp(2.55rem, 9vw, 3.2rem);
+  }
+}
