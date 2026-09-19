@@ -4422,3 +4422,13 @@ body {
     height: 92px;
   }
 }
+
+/* Shopify PDP migration pass 17: enlarge product pair on mobile */
+@media (max-width: 420px) {
+  .product-proof-media img {
+    width: 110%;
+    max-width: none;
+    margin-left: -5%;
+    transform: translateY(-8px);
+  }
+}
