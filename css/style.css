@@ -17,6 +17,7 @@
   --shadow: 0 14px 30px rgba(19, 36, 75, 0.08);
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -4814,7 +4815,6 @@ body {
   }
 }
 
-
 /* Final remaining sections: compact multi-sport, cinematic mobility, functional sizing */
 .section-multisport-performance {
   padding: 64px 0 52px;
@@ -5049,4 +5049,10 @@ body {
   .section-size-guide-table td {
     font-size: 0.86rem;
   }
+}
+
+
+/* Hero lighting pass: clearer daylight treatment without changing composition */
+.shopify-hero-visual > img {
+  filter: brightness(1.18) saturate(1.06) contrast(1.02);
 }
